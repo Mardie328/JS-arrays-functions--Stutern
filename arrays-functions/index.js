@@ -10,4 +10,38 @@
 // Question 2
 const languages = ["C#", "JavaScript", "Ruby", "PHP", "Python"];
 languages.push("Kotlin");
+
+languages.splice(3, 0, "java");
+
+languages.shift();
+
+languages.unshift("Scala", "Swift");
+
+languages.splice(languages.indexOf("PHP"), 1, "Go", "Rust");
 console.log(languages);
+
+// Question 3
+//The value of fruit will be:
+["apple", "mango", "orange"];
+
+// Question 4
+function maxNumber(arr) {
+  let maxValue = arr[0];
+
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > maxValue) {
+      maxValue = arr[i];
+    }
+  }
+
+  return `maximum value is ${maxValue}`;
+}
+
+console.log(maxNumber([4, 5, 10, -2]));
+
+// Question 5
+function valTimesIndex(arr) {
+  return arr.map((eachVal, index) => eachVal * index);
+}
+
+console.log(valTimesIndex([1, 2, 3]));
